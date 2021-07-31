@@ -6,7 +6,7 @@ public:
         while(t>0)
         {
             r=t%10;
-            sum=sum*10+r;
+              sum=sum*10+r;
             t/=10;
         }
         if(sum==x)
