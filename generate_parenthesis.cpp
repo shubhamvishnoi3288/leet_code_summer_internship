@@ -8,14 +8,14 @@ public:
     
 private:
     void backtrace(vector<string>& res, string str, int start, int end, int max) {
-        if(str.length() == max * 2) {
+         if(str.length() == max * 2) {
             res.push_back(str);
             return;
         }
-        if(start < max) { // open parenthesis num is less than max
+         if(start < max) { // open parenthesis num is less than max
             backtrace(res, str+"(", start+1, end, max);
         }
-        if(end < start) {// close parenthesis num is less than open num
+         if(end < start) {// close parenthesis num is less than open num
             backtrace(res, str+")", start, end+1, max);
         }
     }
